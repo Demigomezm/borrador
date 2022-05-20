@@ -120,6 +120,7 @@ body{
     margin: 5px;
     max-width: 100px;
     border: 1px solid #F16A06;
+    border-radius: 5px;
     background-color: #F16A06;
     text-align: center;
 }
@@ -280,6 +281,7 @@ li>a:visited{
         margin: 5px;
         max-width: 100px;
         border: 1px solid #F16A06;
+        border-radius: 0;
         background-color: #F16A06;
         text-align: center;
     }
