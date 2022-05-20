@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo/contacto.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Fuente del H1 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet"> <!--Fuente del Main-->
+    <link rel="shortcut icon" href="chef/favicon.ico" type="image/x-icon"> <!--icono del head -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300&family=Rubik:wght@300&family=Square+Peg&display=swap" rel="stylesheet">
+    <title>Contacto | Mi Especia</title>
+</head>
+<body>
+    <div class="content">
+        <header class="header">
+            <h1 class="header__titulo">Mi Especia</h1>
+            <img class="header__imagen-2" src="fotos especias/fondo_pagina.jpg" alt="">
+        </header>
+
+        <nav class="nav">
+            <ul class="nav__ul">
+                <li class="nav__li"><a href="index.html">Home</a></li>
+                <li class="nav__li"><a href="enpolvo.html">En polvo</a></li>
+                <li class="nav__li"><a href="hojas.html">Hojas</a></li>
+                <li class="nav__li"><a href="otras.html">Otras</a></li>
+                <li class="nav__li"><a href="historia.html">Historia</a></li>
+                <li class="nav__li"><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+
+        <article class="main">
+            <div class="flex-container">
+                <p>
+                    Hola! Mi nombre es Demian, soy el creador de la página. Si querés podés enviarme un comentario sobre 
+                    cualquier tema, opinión de la página o también ponerte en contacto conmigo para alguna colaboración :)
+                </p>
+                <form name="fvalida" class="form">
+                    <div class="form__section">
+                        <input type="text" name="nombre" class="form__input" placeholder="Escriba su nombre">
+                    </div>
+                    <div class="form__section">
+                        <input type="email" name="email" class="form__input" placeholder="Escriba su mail">
+                    </div>
+                    <div class="form__section">
+                        <textarea name="interes" cols="30" rows="10" class="form__input" placeholder="Escriba su mensaje para Mi especia"></textarea>
+                    </div>
+                    <div class="form__section">
+                        <input type="submit" class="form__input">
+                    </div>
+                </form>
+                <div class="form-img">
+                    <div class="img-container">
+                       <div>
+                        <img src="https://cdn-icons-png.flaticon.com/512/95/95645.png" alt="">
+                       </div>
+                    </div>
+                </div>
+        </article>
+
+        <script>
+            function valida_envia() {
+                if (document.content.main.flex-container.fvalida.form__section.nombre.value.length == 0) {
+                    alert("Tiene que escribir su nombre.")
+                    document.content.main.flex-container.fvalida.form__section.nombre.focus()//foco en el campo del error
+                    return 0;
+                }
+
+                if (document.content.main.flex-container.fvalida.form__section.email.value.length == 0) {
+                    alert("Tiene que escribir su email.")
+                    document.content.main.flex-container.fvalida.form__section.email.focus()//foco en el campo del error
+                    return 0;
+                }
+
+                if (document.content.main.flex-container.fvalida.form__section.interes.value.length == 0) {
+                    alert("Debe escribir un motivo de su contacto.")
+                    document.content.main.flex-container.fvalida.form__section.interes.focus()
+                    return 0;
+                }   
+
+                alert("¡Muchas gracias por enviar el formulario!");
+                document.fvalida.submit();
+            }
+        </script>
+
+
+        <footer class="footer">
+            <p>Todos los Derechos Reservados</p>
+            <div class="footer__container">
+                <div class="footer__container-titulo">
+                    <p>Contacto del creador:</p> 
+                </div>
+                <div class="footer__container-links">
+                    <a href="https://www.facebook.com/demian.gomez.7/" target="_blank" rel="noopener noreferrer"><i class='bx bxl-facebook-square bx-sm'></i></a>
+                    <a href="https://www.instagram.com/deemigomez/" target="_blank" rel="noopener noreferrer"><i class='bx bxl-instagram-alt bx-sm' ></i></a>
+                    <a href="https://twitter.com/demigomezm" target="_blank" rel="noopener noreferrer"><i class='bx bxl-twitter bx-sm' ></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

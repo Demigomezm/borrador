@@ -1,0 +1,356 @@
+*{
+    font-family: sans-serif;
+    font-weight: 100;
+    color: rgb(219, 211, 211);
+}
+
+/* medida hasta 605px para celular (mobile first) */
+/* Falta modificar el navegador con JS para mobile */
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header, .nav, .main, .footer{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header{
+    background: #141414;
+    background: linear-gradient(0deg, #141414 0%, #F16A06 100%);
+    flex-basis: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.nav{
+    display: flex;
+    justify-content: center;
+    background: #141414;
+    border-bottom: 2px groove  #F16A06;
+    width:94,2%
+}
+
+.main{
+    background: #1a1a1a;
+    flex-basis: 300px;
+    flex-grow: 2;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+.footer{
+    background: #F16A06;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.header__imagen-2{
+    width: 50px;
+    height: 50px;
+    margin-left: 50px;
+    clip-path: circle(50% at 50% 50%);
+    transition: transform 1s;
+}
+
+.header__titulo{
+    font-family: 'Red Hat Mono', monospace;
+    font-family: 'Rubik', sans-serif;
+    font-family: 'Square Peg', cursive; 
+    font-size: 2em;
+    letter-spacing: 10px;
+    color: rgb(255, 255, 255);
+    transition: transform 1s;
+}
+
+.header__titulo:hover{
+    transform: scale(150% , 150%);
+}
+
+.header__imagen-2:hover{
+    transform: scale(150% , 150%);
+}
+
+.nav__ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+
+.nav__li{
+    display: inline-block;
+    flex-grow: 1;
+    padding: 10px;
+    margin: 5px;
+    max-width: 100px;
+    border: 1px solid #F16A06;
+    background-color: #F16A06;
+    text-align: center;
+}
+
+.nav__li>a{
+    text-decoration: none;
+    color: #1a1a1a;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.nav__li:hover{
+    background-color: #1a1a1a;
+    color:rgb(219, 211, 211)
+}
+
+.nav__li:hover > a{
+    background-color: #1a1a1a;
+    color:rgb(219, 211, 211)
+}
+
+/* edicion especial de contacto */
+.flex-container>p{
+    font-family: 'Libre Baskerville', serif;
+}
+
+.flex-container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #333;
+    margin: 50px 50px;
+    padding: 20px;
+    border: 8px solid transparent;
+    outline: 4px solid white;
+}
+
+.form{
+    min-width: 200px;
+    flex: 1;
+    text-align: center;
+    padding: 30px;
+    order: 5;
+}
+
+.form__input{
+    width: 80%;
+    padding: 7px;
+    margin: 6px 0;
+    border: none;
+    border-bottom: 3px solid #ff7300;
+    background: transparent;
+    color: #fff;
+}
+
+.form__input:focus{
+    background: linear-gradient(to bottom, transparent, #222);
+    outline: none;
+    border-bottom: 3px solid #ff8b2d;
+}
+
+.form textarea{
+    min-height: 140px;
+    resize: none;
+}
+
+.form-img{
+    flex: 1;
+    display: flex;
+    padding: 10px;
+    min-width: 200px;
+    max-width: 300px;
+    order: 2;
+}
+
+.form-img div{
+    padding: 10px;
+}
+
+.img-container{
+    margin: auto;
+}
+
+.img-container div{
+    background-color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    padding: 40px;
+}
+
+.form-img img{
+    width: 90%;
+    margin: auto;
+}
+
+.form input[type="submit"]{
+    background-color: #ff8b2d;
+    border-bottom: none;
+    padding: 12px;
+}
+
+.form input[type="submit"]:hover {
+    background-color: #ff7300;
+    border-bottom: none;
+    padding: 12px;
+}
+
+.form input[type="submit"]:focus{
+    background: #ff8b2d;
+}
+
+.form input[type="submit"]:active{
+    background: linear-gradient(to bottom, #ff7300, #b95402);
+}
+/* termina edicion especial de contacto */
+
+
+.footer>p{
+    padding: 3px;
+}
+
+.footer__container{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.footer__container-titulo{
+    margin-right: 5px;
+}
+
+.footer__container-links{
+    margin-left: 5px;
+}
+
+
+
+
+/* medida de 605px a 900px para tablets */
+/* acá mantiene la estructura del celular sin el menú desplegable */
+@media screen and (min-width: 605px){
+    .content{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+    
+    .header, .nav, .main, .footer{
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .header{
+    background: #141414;
+    background: linear-gradient(0deg, #141414 0%, #F16A06 100%);
+    flex-basis: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    }
+    
+    .nav{
+        display: flex;
+        justify-content: center;
+        background: #141414;
+        border-bottom: 2px groove  #F16A06;
+        width:94,2%
+    }
+
+
+
+    .header__imagen-2{
+        width: 50px;
+        height: 50px;
+        margin-left: 50px;
+        clip-path: circle(50% at 50% 50%);
+        transition: transform 1s;
+    }
+    
+    .header__titulo{
+        font-family: 'Red Hat Mono', monospace;
+        font-family: 'Rubik', sans-serif;
+        font-family: 'Square Peg', cursive; 
+        font-size: 2em;
+        letter-spacing: 10px;
+        color: rgb(255, 255, 255);
+        transition: transform 1s;
+    }
+    
+    .header__titulo:hover{
+        transform: scale(150% , 150%);  
+    }
+
+    .header__imagen-2:hover{
+        transform: scale(150% , 150%); 
+    }
+    
+    .nav__ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+    
+    
+    .nav__li{
+        display: inline-block;
+        flex-grow: 1;
+        padding: 10px;
+        margin: 5px;
+        max-width: 100px;
+        border: 1px solid #F16A06;
+        background-color: #F16A06;
+        text-align: center;
+    }
+    
+    .nav__li>a{
+        text-decoration: none;
+        color: #1a1a1a;
+    }
+    
+    .nav__li:hover{
+        background-color: #1a1a1a;
+        color:rgb(219, 211, 211)
+    }
+    
+    .nav__li:hover > a{
+        background-color: #1a1a1a;
+        color:rgb(219, 211, 211)
+    }
+}
+
+
+
+/* A chequear si conviene cambiar a Grid para desktop */
