@@ -224,6 +224,10 @@ body{
 .form input[type="submit"]:active{
     background: linear-gradient(to bottom, #ff7300, #b95402);
 }
+
+.main>.flex-container>p>a{
+    font-family: 'Libre Baskerville', serif;
+}
 /* termina edicion especial de contacto */
 
 
