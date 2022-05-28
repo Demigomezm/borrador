@@ -4,8 +4,10 @@
     color: rgb(219, 211, 211);
 }
 
+/* enpolvo.css es para los html: enpolvo, historia, hojas, otras */
+
 /* medida hasta 605px para celular (mobile first) */
-/* Falta modificar el navegador con JS para mobile */
+/* En algun futuro me gustaría hacer el menú hamburguesa para mobile */
 body{
     margin: 0;
     padding: 0;
@@ -83,6 +85,8 @@ body{
     color: rgb(255, 255, 255);
     transition: transform 1s;
 }
+
+/* ANIMACION */
 
 .header__titulo:hover{
     transform: scale(150% , 150%);
@@ -177,34 +181,8 @@ body{
 
 
 
-                                   /* para cambiar las cosas de los links con pauchi */
-/* li>a{
-
-}
-
-li>a:link{
-    color: ;
-}
-
-li>a:visited{
-    color: ;
-}
-
-.footer__container-links>a{
-
-}
-
-.footer__container-links>a:link{
-    color: ;
-}
-
-.footer__container-links>a:visited{
-    color: ;
-} */
-
-
 /* medida de 605px a 900px para tablets */
-/* acá mantiene la estructura del celular (Flex) sin el menú desplegable */
+/* acá mantiene la estructura del celular (Flex) sin el menú desplegable hamburguesa (futuro) */
 @media screen and (min-width: 605px){
     .content{
         display: flex;
@@ -310,18 +288,8 @@ li>a:visited{
 
 
 
-
-
-
-
-
-
-
-
-
-
 /* Medida a partir de 900px para escritorio. 
- Acá cambia de ubicación el aside(home) y cambia la estructura(antes Flex ahora Grid),
+ Acá cambia de ubicación el aside (home) y cambia la estructura (antes Flex ahora Grid),
  el menu se mantiene como la tablet o sea no es desplegable */
 @media screen and (min-width: 900px){
     body{

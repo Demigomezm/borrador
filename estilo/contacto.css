@@ -4,8 +4,10 @@
     color: rgb(219, 211, 211);
 }
 
+/* contacto.css es solo para contacto.html */
+
 /* medida hasta 605px para celular (mobile first) */
-/* Falta modificar el navegador con JS para mobile */
+/* En algun futuro me gustaría hacer el menú hamburguesa para mobile */
 body{
     margin: 0;
     padding: 0;
@@ -84,6 +86,8 @@ body{
     transition: transform 1s;
 }
 
+
+/* ANIMACION */
 .header__titulo:hover{
     transform: scale(150% , 150%);
 }
@@ -356,7 +360,3 @@ body{
         color:rgb(219, 211, 211)
     }
 }
-
-
-
-/* A chequear si conviene cambiar a Grid para desktop */
